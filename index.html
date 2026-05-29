@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Revanth Vardhan - High-Performance Full-Stack Developer, Java & Spring Boot Architect, and Oracle SQL Database Specialist featuring interactive glassmorphic UI.">
+    <meta name="keywords"
+        content="Revanth Vardhan, Revanth, Java, Spring Boot, Oracle Database, SQL, Web Developer, UI/UX, Portfolio, Glassmorphic">
+    <meta name="author" content="Revanth Vardhan">
+    <title>Revanth Vardhan | Interactive Glassmorphism Developer Portfolio</title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+       INTRO PRELOADER (REVANTH VARDHAN REVEAL)
+       ========================================== -->
+    <div id="preloader">
+        <div class="preloader-panel panel-left"></div>
+        <div class="preloader-panel panel-right"></div>
+        <div class="preloader-content">
+            <div class="logo-box">
+                <svg viewBox="0 0 100 100" class="preloader-svg">
+                    <defs>
+                        <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="var(--accent-cyan)" />
+                            <stop offset="100%" stop-color="var(--accent-purple)" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Shield Hexagon -->
+                    <polygon points="50,5 90,28 90,72 50,95 10,72 10,28" fill="none" stroke="url(#logo-grad)"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-hex" />
+                    <!-- Letter R -->
+                    <path d="M 33,30 L 33,70 M 33,30 H 49 C 55,30 55,46 49,46 H 33 M 43,46 L 53,70" fill="none"
+                        stroke="url(#logo-grad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="svg-char-r" />
+                    <!-- Letter V -->
+                    <path d="M 50,46 L 59,70 L 68,30" fill="none" stroke="url(#logo-grad)" stroke-width="4.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="svg-char-v" />
+                </svg>
+            </div>
+            <h1 class="preloader-name">REVANTH <span>VARDHAN</span></h1>
+            <div class="preloader-counter-container">
+                <span class="preloader-counter">00</span><span class="counter-pct">%</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ambient Floating Blobs for Cyber-Glow Effect -->
+    <div class="ambient-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Active High-Performance Particle Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+    <nav class="navbar glass-panel">
+        <a href="#hero" class="logo">
+            <svg viewBox="0 0 100 100" class="nav-logo-svg">
+                <!-- Hexagon -->
+                <polygon points="50,5 90,28 90,72 50,95 10,72 10,28" fill="none" stroke="url(#logo-grad)"
+                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- R -->
+                <path d="M 33,30 L 33,70 M 33,30 H 49 C 55,30 55,46 49,46 H 33 M 43,46 L 53,70" fill="none"
+                    stroke="url(#logo-grad)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- V -->
+                <path d="M 50,46 L 59,70 L 68,30" fill="none" stroke="url(#logo-grad)" stroke-width="6.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>REVANTH</span> VARDHAN
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-btn" aria-label="Toggle Theme">
+                <i data-lucide="moon" id="theme-icon"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+    <header id="hero" class="hero section">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="hero-subtitle">High-Performance Engineering</span>
+                <h1 class="hero-title">Hi, I am <span>Revanth Vardhan</span></h1>
+                <div class="typing-container">
+                    I am a <span class="typed-text"></span><span class="cursor"></span>
+                </div>
+                <p class="hero-desc">
+                    I am an engineering student at Ramachandra College of Engineering with a focus on full-stack
+                    development and premium UI/UX design. I combine a strong academic foundation with my technical
+                    skills. I’m driven by the challenge of creating high-performance digital experiences that look as
+                    good as they function.
+                </p>
+                <div class="hero-badges-row">
+                    <div class="hero-badge-stat">
+                        <i data-lucide="award"></i> <span>8.90 CGPA</span>
+                    </div>
+                    <div class="hero-badge-stat">
+                        <i data-lucide="sparkles"></i> <span>4+ Technical Skills</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects <i data-lucide="arrow-up-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Let's Collaborate <i data-lucide="users"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-graphic">
+                <!-- Advanced Tech Telemetry Vector Ring -->
+                <div class="tech-radar-ring">
+                    <svg viewBox="0 0 200 200" class="radar-svg">
+                        <defs>
+                            <path id="radar-text-path" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" />
+                        </defs>
+                        <!-- Outer Orbiting ring -->
+                        <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(0, 240, 255, 0.1)" stroke-width="1.5"
+                            stroke-dasharray="6,4" class="radar-ring-pulse"></circle>
+                        <!-- Concentric grids -->
+                        <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(189, 0, 255, 0.08)" stroke-width="1"
+                            stroke-dasharray="2,12"></circle>
+                        <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(0, 240, 255, 0.04)" stroke-width="0.75"></circle>
+                        <circle cx="100" cy="100" r="67" fill="none" stroke="rgba(189, 0, 255, 0.05)" stroke-width="1.5"
+                            stroke-dasharray="40,180"></circle>
+                        
+                        <!-- Radar Sweep ticks -->
+                        <line x1="100" y1="5" x2="100" y2="15" stroke="rgba(0, 240, 255, 0.25)" stroke-width="2"></line>
+                        <line x1="100" y1="185" x2="100" y2="195" stroke="rgba(0, 240, 255, 0.25)" stroke-width="2"></line>
+                        <line x1="5" y1="100" x2="15" y2="100" stroke="rgba(0, 240, 255, 0.25)" stroke-width="2"></line>
+                        <line x1="185" y1="100" x2="195" y2="100" stroke="rgba(0, 240, 255, 0.25)" stroke-width="2"></line>
+                        
+                        <!-- Mini Crosshair Ticks -->
+                        <circle cx="100" cy="100" r="4" fill="none" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1"></circle>
+                        
+                        <!-- Circular Spinning Telemetry Text -->
+                        <g class="radar-text-group">
+                            <text class="radar-text" fill="rgba(0, 240, 255, 0.2)" font-size="5.2" font-family="'Courier New', monospace" font-weight="bold" letter-spacing="1.2">
+                                <textPath href="#radar-text-path">
+                                    • REVANTH VARDHAN // FULL-STACK ARCHITECT // JAVA • SPRING • ORACLE SQL // CORE.SYS: ACTIVE //
+                                </textPath>
+                            </text>
+                        </g>
+                    </svg>
+                </div>
+                <div class="profile-card-wrapper" data-profile-tilt>
+                    <!-- Conic Glowing Halos -->
+                    <div class="profile-glow-ring ring-1"></div>
+                    <div class="profile-glow-ring ring-2"></div>
+                    
+                    <!-- HUD Target Brackets -->
+                    <div class="hud-bracket top-left"></div>
+                    <div class="hud-bracket top-right"></div>
+                    <div class="hud-bracket bottom-left"></div>
+                    <div class="hud-bracket bottom-right"></div>
+
+                    <div class="profile-image-container glass-panel" id="profile-container" style="cursor: default;">
+                        <!-- Retina Scan Laser Sweep -->
+                        <div class="profile-scan-line"></div>
+                        
+                        <!-- Customizable Local Profile Photo (Place profile.jpg in your website folder to display automatically) -->
+                        <img src="profile.jpg" alt="Revanth Vardhan" class="profile-img" id="profile-display-img"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&h=500&q=80';">
+                        <!-- Hidden File Input -->
+                        <input type="file" id="profile-file-input" accept="image/*" style="display: none;">
+                        <div class="profile-status-badge">
+                            <span class="pulse-dot"></span> Open to Work
+                        </div>
+                    </div>
+                    <!-- Ambient dynamic floating tags -->
+                    <div class="floating-tech-badge java-float glass-panel">
+                        <i data-lucide="coffee"></i> <span>Java</span>
+                    </div>
+                    <div class="floating-tech-badge oracle-float glass-panel">
+                        <i data-lucide="database"></i> <span>Oracle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
+            <span>Discover Education</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </a>
+    </header>
+
+    <!-- ==========================================
+       ABOUT & EDUCATION TIMELINE
+       ========================================== -->
+    <section id="about" class="about container section">
+        <h2 class="section-title">My <span>Education</span> & Milestones</h2>
+        <div class="about-grid">
+
+            <div class="about-info">
+                <h3 class="hero-subtitle" style="text-align: left;">Who I Am</h3>
+                <h4 style="font-size: 1.8rem; line-height: 1.3;">A logical thinker driven by high-level architectural
+                    standards.</h4>
+                <p class="about-p">
+                    My engineering process is centered on writing clean, reusable code, structuring bulletproof
+                    relational databases, and designing layouts that elevate user experiences. I thrive on solving
+                    complex backend challenges, managing asynchronous architectures, and working in high-performing
+                    teams to build production-grade systems.
+                </p>
+                <p class="about-p">
+                    My academic education has prepared me to systematically dissect problems, optimize execution speeds,
+                    and collaborate with multidisciplinary engineers to transform conceptual blueprints into scalable
+                    platforms.
+                </p>
+                <div style="margin-top: 1rem;">
+                    <a href="#contact" class="btn btn-primary">
+                        Get In Touch <i data-lucide="send"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <!-- BGTO -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-date">Schooling</div>
+                        <h4 class="timeline-title">BGTO High School</h4>
+                        <div class="timeline-subtitle">Academic Foundations <span class="timeline-grade-badge">91.5% Grade</span></div>
+                        <p class="timeline-desc">
+                            Ignited a deep passion for mathematics, logical algorithms, and structured science, laying
+                            the initial foundations for computer programming principles.
+                        </p>
+                    </div>
+                </div>
+                <!-- Sri Chaitanya -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-date">Intermediate</div>
+                        <h4 class="timeline-title">Sri Chaitanya College</h4>
+                        <div class="timeline-subtitle">Analytical & Mathematical Rigor <span class="timeline-grade-badge">94.6% Grade</span></div>
+                        <p class="timeline-desc">
+                            Acquired rigorous analytical and physics-oriented problem-solving skills under
+                            high-competition environments, cultivating a disciplined approach to structural thinking.
+                        </p>
+                    </div>
+                </div>
+                <!-- Ramachandra College -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-date">B.Tech Engineering</div>
+                        <h4 class="timeline-title">Ramachandra College of Engineering</h4>
+                        <div class="timeline-subtitle">Computer Science & Engineering (Artificial Intelligence & Data Science) <span class="timeline-grade-badge">8.90 CGPA</span></div>
+                        <p class="timeline-desc">
+                            Maintaining a cumulative academic GPA of 8.90. Dived deep into Object-Oriented Programming
+                            (Java), Relational Database Management Systems (Oracle SQL), Web Technologies, Data
+                            Structures, and Software Architecture. Served as a lead coordinator for laboratory projects.
+                        </p>
+                    </div>
+                </div>
+                <!-- Hackathon Certificate -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-date">Achievement</div>
+                        <h4 class="timeline-title">National Level Hackathon Excellence</h4>
+                        <div class="timeline-subtitle">Innovation & Team Collaboration</div>
+                        <p class="timeline-desc">
+                            Collaborated in a team of 4 to design, build, and pitch a complex software system under
+                            rigid time constraints, earning recognition and certificates for engineering design.
+                        </p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7456031407325360128/" target="_blank" class="certificate-badge">
+                            <i data-lucide="award"></i> Certified Technical Innovator
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+       TECHNICAL SKILLS SECTION
+       ========================================== -->
+    <section id="skills" class="skills container section reveal-fly-up">
+        <h2 class="section-title">Technical <span>Skills</span> & Expertise</h2>
+        <div class="skills-grid">
+            <!-- Skill Category 1: Frontend & Design -->
+            <div class="skills-card glass-panel" data-tilt>
+                <!-- Blueprint pattern & corner overlays -->
+                <div class="skills-card-hud-bg"></div>
+                <div class="hud-bracket top-left"></div>
+                <div class="hud-bracket top-right"></div>
+                <div class="hud-bracket bottom-left"></div>
+                <div class="hud-bracket bottom-right"></div>
+
+                <div class="skills-card-header">
+                    <div class="skills-icon"><i data-lucide="layout-template"></i></div>
+                    <div>
+                        <h3 class="skills-card-title">Frontend & UI/UX</h3>
+                        <span class="hud-card-telemetry">FE.CORE: READY</span>
+                    </div>
+                </div>
+                <p class="skills-card-desc">Crafting premium, highly responsive user interfaces and interactive layouts.</p>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Web Development</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="proficiency-bar" data-percent="90%" style="width: 0%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>UI/UX Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="proficiency-bar" data-percent="85%" style="width: 0%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML5 & CSS3</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="proficiency-bar" data-percent="95%" style="width: 0%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Category 2: Backend Architecture -->
+            <div class="skills-card glass-panel" data-tilt>
+                <!-- Blueprint pattern & corner overlays -->
+                <div class="skills-card-hud-bg"></div>
+                <div class="hud-bracket top-left"></div>
+                <div class="hud-bracket top-right"></div>
+                <div class="hud-bracket bottom-left"></div>
+                <div class="hud-bracket bottom-right"></div>
+
+                <div class="skills-card-header">
+                    <div class="skills-icon"><i data-lucide="cpu"></i></div>
+                    <div>
+                        <h3 class="skills-card-title">Backend Architecture</h3>
+                        <span class="hud-card-telemetry">BE.CORE: ACTIVE</span>
+                    </div>
+                </div>
+                <p class="skills-card-desc">Developing robust, scalable backend servers and concurrent APIs.</p>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Java Engineering</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="proficiency-bar" data-percent="92%" style="width: 0%; background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Spring Boot APIs</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="proficiency-bar" data-percent="88%" style="width: 0%; background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>RESTful Web Services</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="proficiency-bar" data-percent="90%" style="width: 0%; background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       PROJECTS WITH EXPANDABLE SCHEMATICS SECTION
+       ========================================== -->
+    <section id="projects" class="projects container section">
+        <h2 class="section-title">Featured <span>Engineering</span> Projects</h2>
+
+        <div class="projects-grid">
+            <!-- Project 1: FlashWay Ticket Booking Portal -->
+            <div class="project-card glass-panel reveal-fly-up" data-tilt>
+                <div class="project-header-panel">
+                    <div class="project-info">
+                        <span class="project-tag">Transit Reservation</span>
+                        <h3 class="project-title">FlashWay Ticket Booking Portal</h3>
+                        <p class="project-desc">
+                            A high-performance ticketing and reservation system for buses and trains, coordinating
+                            real-time seat availability matrices, automated route mapping, and secure fare transactions.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span class="tech-badge">Java 17</span>
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">Oracle Database</span>
+                            <span class="tech-badge">WebSockets</span>
+                            <span class="tech-badge">Seat Matrix API</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7443487282919186432/" target="_blank" class="btn btn-linkedin-hud">
+                                <span class="btn-hud-dot"></span>
+                                <i data-lucide="linkedin"></i> 
+                                View Architecture 
+                                <i data-lucide="external-link" class="icon-small"></i>
+                            </a>
+                            <a href="#" class="btn btn-primary" onclick="event.stopPropagation(); return false;">Book
+                                Tickets <i data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=600&h=300&q=80"
+                            alt="FlashWay Transit Tickets" class="project-img">
+                        <div class="project-visual-overlay"></div>
+                        <div class="project-visual-icon"><i data-lucide="ticket"></i></div>
+                        <span class="project-visual-tag">Bus & Train Portal</span>
+                    </div>
+                </div>
+
+                <div class="project-architecture-drawer">
+                    <div class="architecture-content">
+                        <h4 class="architecture-title"><i data-lucide="network"></i> High-Speed Transit Reservation &
+                            Ticketing Cycle</h4>
+                        <div class="architecture-grid">
+                            <div class="flow-diagram">
+                                <div class="flow-node">Passenger Booking UI <span>Select Source, Destination & Seat
+                                        Class</span></div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">Spring Reservation Core <span>Seat Matrix Allocator & Dynamic
+                                        Pricing</span></div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">Oracle SQL DB Cluster <span>Pessimistic Row-Locks & Ticket
+                                        Ledgers</span></div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">WebSocket Alert Engine <span>Instant delay & Ticket Notification
+                                        Dispatch</span></div>
+                            </div>
+                            <div class="architecture-notes">
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Seat Matrix Allocator:</strong> Employs parallel thread safety algorithms
+                                        to compute real-time seat selections, reducing booking conflicts by 99%.</p>
+                                </div>
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>WebSocket Hub:</strong> Pushes live platform changes, scheduling updates,
+                                        and reservation confirmations to passengers instantly.</p>
+                                </div>
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Pessimistic Locking:</strong> Employs Oracle database table-row locks
+                                        (`SELECT FOR UPDATE`) to prevent duplicate bookings during high-demand holiday
+                                        seasons.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Blood Donations Platform -->
+            <div class="project-card glass-panel reveal-fly-up" style="transition-delay: 0.1s;" data-tilt>
+                <div class="project-header-panel">
+                    <div class="project-info">
+                        <span class="project-tag">Healthcare Coordination</span>
+                        <h3 class="project-title">Blood Donations Portal</h3>
+                        <p class="project-desc">
+                            A life-saving coordination network utilizing Spring Boot REST APIs and Oracle DB connection
+                            pools to match donor availabilities with patient emergency requirements.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">REST API</span>
+                            <span class="tech-badge">Oracle Database</span>
+                            <span class="tech-badge">SMS Alerts Integration</span>
+                            <span class="tech-badge">HTML5/CSS3</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7443487282919186432/" target="_blank" class="btn btn-linkedin-hud">
+                                <span class="btn-hud-dot"></span>
+                                <i data-lucide="linkedin"></i> 
+                                View Architecture 
+                                <i data-lucide="external-link" class="icon-small"></i>
+                            </a>
+                            <a href="#" class="btn btn-primary" onclick="event.stopPropagation(); return false;">Find
+                                Donors <i data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&h=300&q=80"
+                            alt="Blood Donation Process" class="project-img">
+                        <div class="project-visual-overlay"></div>
+                        <div class="project-visual-icon"><i data-lucide="heart"></i></div>
+                        <span class="project-visual-tag">Emergency Hub</span>
+                    </div>
+                </div>
+
+                <div class="project-architecture-drawer">
+                    <div class="architecture-content">
+                        <h4 class="architecture-title"><i data-lucide="network"></i> Patient Match & Notification Flow
+                        </h4>
+                        <div class="architecture-grid">
+                            <div class="flow-diagram">
+                                <div class="flow-node">Emergency Request Form <span>Patient Location & Blood Type
+                                        Input</span></div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">Oracle Match SQL Engine <span>Tuned Availability Indexes</span>
+                                </div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">SMS API Dispatcher <span>Trigger Fast Notification
+                                        Broadcasts</span></div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">Donor Web Portal <span>Confirm Request Acceptance</span></div>
+                            </div>
+                            <div class="architecture-notes">
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Availability Matcher:</strong> Uses relational SQL queries to instantly
+                                        filter closest active donors matching the blood type group.</p>
+                                </div>
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Urgent Alert System:</strong> Fires bulk SMS hooks dynamically using
+                                        thread-pooled asynchronous background executors.</p>
+                                </div>
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Transactional Store:</strong> Preserves donor confidentiality statefully
+                                        using localized connection configurations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Elite Shopping -->
+            <div class="project-card glass-panel reveal-fly-up" style="transition-delay: 0.2s;" data-tilt>
+                <div class="project-header-panel">
+                    <div class="project-info">
+                        <span class="project-tag">E-Commerce Retail</span>
+                        <h3 class="project-title">Elite Shopping E-Store</h3>
+                        <p class="project-desc">
+                            A high-fidelity glassmorphic digital storefront showcasing visual product shelves, cart
+                            state mapping, payment integrations, and concurrent stock ledger checks.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span class="tech-badge">Vanilla HTML5/CSS3</span>
+                            <span class="tech-badge">JavaScript ES6</span>
+                            <span class="tech-badge">Spring Security</span>
+                            <span class="tech-badge">Oracle PL/SQL</span>
+                            <span class="tech-badge">Stripe Payment</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7443487282919186432/" target="_blank" class="btn btn-linkedin-hud">
+                                <span class="btn-hud-dot"></span>
+                                <i data-lucide="linkedin"></i> 
+                                View Architecture 
+                                <i data-lucide="external-link" class="icon-small"></i>
+                            </a>
+                            <a href="#" class="btn btn-primary" onclick="event.stopPropagation(); return false;">Browse
+                                Store <i data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&h=300&q=80"
+                            alt="Elite Shopping Storefront" class="project-img">
+                        <div class="project-visual-overlay"></div>
+                        <div class="project-visual-icon"><i data-lucide="shopping-bag"></i></div>
+                        <span class="project-visual-tag">Secure Payments</span>
+                    </div>
+                </div>
+
+                <div class="project-architecture-drawer">
+                    <div class="architecture-content">
+                        <h4 class="architecture-title"><i data-lucide="network"></i> Secure Transaction & Inventory
+                            Checkout Cycle</h4>
+                        <div class="architecture-grid">
+                            <div class="flow-diagram">
+                                <div class="flow-node">E-Store UI Shelf <span>State-Controlled Basket Layouts</span>
+                                </div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">Secure Checkout API <span>Spring Security JWT Gateway</span>
+                                </div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">Stripe Processor Hub <span>External Tokenized Settlement</span>
+                                </div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">PL/SQL Stock Allocator <span>Concurrent Ledger Lock
+                                        Updates</span></div>
+                            </div>
+                            <div class="architecture-notes">
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Visual Catalogue:</strong> Designed with modern glassmorphism flex
+                                        columns, loading cached cards under 50ms.</p>
+                                </div>
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Secure Checkout:</strong> Spring Security shields transaction API layers
+                                        statefully using cryptographic JWT authorizations.</p>
+                                </div>
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Pessimistic Locks:</strong> Employs Oracle database locks (`SELECT FOR
+                                        UPDATE`) to prevent overselling inventory during concurrent peaks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Academic Paper Simplifier -->
+            <div class="project-card glass-panel reveal-fly-up" style="transition-delay: 0.3s;" data-tilt>
+                <div class="project-header-panel">
+                    <div class="project-info">
+                        <span class="project-tag">AI Semantic Scanning</span>
+                        <h3 class="project-title">Academic Paper Simplifier</h3>
+                        <p class="project-desc">
+                            An intelligent AI parser scanning raw technical publication document structures, generating
+                            simplified interactive summary cards and key concept flowcharts.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span class="tech-badge">Vanilla JavaScript</span>
+                            <span class="tech-badge">JSON Parsing API</span>
+                            <span class="tech-badge">PDF Text Extractor</span>
+                            <span class="tech-badge">REST API Core</span>
+                            <span class="tech-badge">Glassmorphism UI</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7453436855917912064/" target="_blank" class="btn btn-linkedin-hud">
+                                <span class="btn-hud-dot"></span>
+                                <i data-lucide="linkedin"></i> 
+                                View Architecture 
+                                <i data-lucide="external-link" class="icon-small"></i>
+                            </a>
+                            <a href="#" class="btn btn-primary" onclick="event.stopPropagation(); return false;">Scan
+                                Paper <i data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&h=300&q=80"
+                            alt="Academic Paper Simplifier" class="project-img">
+                        <div class="project-visual-overlay"></div>
+                        <div class="project-visual-icon"><i data-lucide="book-open"></i></div>
+                        <span class="project-visual-tag">AI Engine</span>
+                    </div>
+                </div>
+
+                <div class="project-architecture-drawer">
+                    <div class="architecture-content">
+                        <h4 class="architecture-title"><i data-lucide="network"></i> PDF Extraction & Summarization
+                            Workflow</h4>
+                        <div class="architecture-grid">
+                            <div class="flow-diagram">
+                                <div class="flow-node">Drag & Drop Uploader <span>Raw PDF File Uploads</span></div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">JSON Stream Parser <span>Convert Text Coordinates to Structured
+                                        Streams</span></div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">Semantic Abstract Generator <span>Target Key Concepts REST
+                                        Queries</span></div>
+                                <div class="flow-connector"><i data-lucide="arrow-down"></i></div>
+                                <div class="flow-node">Interactive summarized cards <span>Staggered CSS Key-points
+                                        Render</span></div>
+                            </div>
+                            <div class="architecture-notes">
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Stream Parsing:</strong> Fast coordinate extractors map document segments
+                                        dynamically inside your browser.</p>
+                                </div>
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>AI Connectors:</strong> Utilizes lightweight REST endpoints to deliver
+                                        parsed abstract vectors to semantic modeling services.</p>
+                                </div>
+                                <div class="arch-bullet">
+                                    <div class="arch-bullet-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <p><strong>Summarized Cards:</strong> Generates beautiful glass summaries detailing
+                                        equations, abstracts, and flows inside clickable layouts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ==========================================
+       CONTACT & COLLABORATION
+       ========================================== -->
+    <section id="contact" class="contact container section">
+        <h2 class="section-title">Start A <span>Project</span></h2>
+
+        <div class="contact-grid">
+            <div class="contact-details">
+                <div class="contact-card glass-panel">
+                    <h3 class="contact-title">Let's build something <span>incredible</span>.</h3>
+                    <p class="contact-desc" style="margin-top: 0.5rem; margin-bottom: 2rem;">
+                        Whether you are looking to construct a distributed backend architecture, design a custom
+                        high-performance frontend, or brainstorm database schema implementations, I would love to hear
+                        from you.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <div class="method-icon"><i data-lucide="mail"></i></div>
+                            <div>
+                                <div class="method-label">Direct Email</div>
+                                <a href="mailto:yasalapurevanth97@gmail.com"
+                                    class="method-value">yasalapurevanth97@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <div class="method-label">Location</div>
+                                <span class="method-value">Andhra Pradesh, India</span>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon"><i data-lucide="linkedin"></i></div>
+                            <div>
+                                <div class="method-label">LinkedIn Connections</div>
+                                <a href="https://www.linkedin.com/in/revanth-vardhan-yasalapu-7740693ba/" target="_blank"
+                                    class="method-value">linkedin.com/in/revanth-vardhan-yasalapu-7740693ba</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form glass-panel" id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" id="subject" class="form-input" placeholder="How can I help you?" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message Details</label>
+                    <textarea id="message" class="form-input form-textarea" placeholder="Explain your project goals..."
+                        required></textarea>
+                </div>
+
+                <div class="form-status" id="form-status"></div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;" id="submit-btn">
+                    Send Message <i data-lucide="send"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       FOOTER
+       ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <a href="#hero" class="footer-logo">
+                <svg viewBox="0 0 100 100" class="footer-logo-svg">
+                    <polygon points="50,5 90,28 90,72 50,95 10,72 10,28" fill="none" stroke="url(#logo-grad)"
+                        stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 33,30 L 33,70 M 33,30 H 49 C 55,30 55,46 49,46 H 33 M 43,46 L 53,70" fill="none"
+                        stroke="url(#logo-grad)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 50,46 L 59,70 L 68,30" fill="none" stroke="url(#logo-grad)" stroke-width="6.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>REVANTH</span> VARDHAN
+            </a>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/revanth-vardhan-yasalapu-7740693ba/" target="_blank" aria-label="LinkedIn Connection">
+                    <i data-lucide="linkedin"></i>
+                </a>
+            </div>
+            <p class="footer-copyright">
+                &copy; All Rights Reserved. Revanth Vardhan Yasalapu.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Portfolio JS Logic -->
+    <script src="script.js"></script>
+</body>
+
+</html>
