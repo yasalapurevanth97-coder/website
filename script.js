@@ -635,7 +635,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // INTERACTIVE PROFILE PHOTO CUSTOMIZER (DISABLED / NOT WORKABLE)
+    // INTERACTIVE PROFILE PHOTO CUSTOMIZER
     // ==========================================
     const profileContainer = document.getElementById('profile-container');
     const profileFileInput = document.getElementById('profile-file-input');
@@ -647,8 +647,6 @@ document.addEventListener('DOMContentLoaded', () => {
         profileDisplayImg.src = savedPhoto;
     }
 
-    // Profile photo upload click listeners disabled to make the profile photo static
-    /* 
     if (profileContainer && profileFileInput && profileDisplayImg) {
         profileContainer.addEventListener('click', () => {
             profileFileInput.click();
@@ -668,5 +666,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    */
 });
