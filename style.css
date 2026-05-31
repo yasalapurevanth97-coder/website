@@ -718,77 +718,11 @@ body.light-mode .profile-status-badge {
     100% { transform: scale(2.8); opacity: 0; }
 }
 
-/* Dynamic floating tech badges */
-.floating-tech-badge {
-    position: absolute;
-    padding: 0.5rem 1rem;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    box-shadow: var(--glass-shadow);
-    z-index: 4;
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    color: var(--text-primary);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    transform-style: preserve-3d;
-    transition: var(--transition-smooth);
-}
-
-.java-float {
-    top: 5%;
-    left: -18%;
-    transform: translate3d(0, 0, 48px);
-    animation: floatBadgeJava 6s infinite ease-in-out;
-}
-
-.oracle-float {
-    bottom: 12%;
-    right: -18%;
-    transform: translate3d(0, 0, 48px);
-    animation: floatBadgeOracle 6s infinite ease-in-out;
-    animation-delay: -3s;
-}
-
-.floating-tech-badge i {
-    width: 16px;
-    height: 16px;
-    stroke-width: 2.5px;
-}
-
-.java-float i {
-    color: var(--accent-orange);
-}
-
-.oracle-float i {
-    color: hsl(0, 85%, 55%);
-}
-
-@keyframes floatBadgeJava {
-    0%, 100% { transform: translate3d(0, 0, 48px); }
-    50% { transform: translate3d(0, -12px, 48px); }
-}
-
-@keyframes floatBadgeOracle {
-    0%, 100% { transform: translate3d(0, 0, 48px); }
-    50% { transform: translate3d(0, -12px, 48px); }
-}
-
 /* Scale adjustments for responsiveness */
 @media (max-width: 480px) {
     .profile-card-wrapper {
         width: 250px;
         height: 250px;
-    }
-    .java-float {
-        left: -8%;
-    }
-    .oracle-float {
-        right: -8%;
     }
 }
 
