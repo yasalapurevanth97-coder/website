@@ -2250,6 +2250,7 @@ body.light-mode .footer-logo-svg {
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     transition: var(--transition-smooth);
+    text-decoration: none;
 }
 
 .hero-badge-stat:nth-child(1) {
