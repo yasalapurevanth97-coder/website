@@ -635,35 +635,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // INTERACTIVE PROFILE PHOTO CUSTOMIZER
+    // INTERACTIVE PROFILE PHOTO CUSTOMIZER (DISABLED)
     // ==========================================
-    const profileContainer = document.getElementById('profile-container');
-    const profileFileInput = document.getElementById('profile-file-input');
     const profileDisplayImg = document.getElementById('profile-display-img');
 
     // Load custom profile photo from localStorage if cached
     const savedPhoto = localStorage.getItem('revanth-profile-photo');
     if (savedPhoto && profileDisplayImg) {
         profileDisplayImg.src = savedPhoto;
-    }
-
-    if (profileContainer && profileFileInput && profileDisplayImg) {
-        profileContainer.addEventListener('click', () => {
-            profileFileInput.click();
-        });
-
-        profileFileInput.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (event) => {
-                    const dataUrl = event.target.result;
-                    profileDisplayImg.src = dataUrl;
-                    // Cache locally in localStorage to persist on page refreshes
-                    localStorage.setItem('revanth-profile-photo', dataUrl);
-                };
-                reader.readAsDataURL(file);
-            }
-        });
     }
 });
