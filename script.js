@@ -152,10 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const typedTextSpan = document.querySelector('.typed-text');
     const roles = [
-        "Full-Stack Web Developer",
-        "Engineering Student (8.90 GPA)",
-        "Java / Spring Boot Architect",
-        "Oracle Database Specialist"
+        "engineering student (8.90)CGPA",
+        "web developer"
     ];
     let roleIndex = 0;
     let charIndex = 0;

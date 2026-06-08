@@ -2466,31 +2466,7 @@ body.light-mode .radar-text {
     100% { transform: scale(1.02); opacity: 0.85; }
 }
 
-/* Active Biometric Scanning Line */
-.profile-scan-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
-    box-shadow: 0 0 10px 2px var(--accent-cyan);
-    opacity: 0;
-    z-index: 5;
-    pointer-events: none;
-    animation: scannerSweep 4s ease-in-out infinite;
-}
 
-body.light-mode .profile-scan-line {
-    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
-    box-shadow: 0 0 10px 2px var(--accent-primary);
-}
-
-@keyframes scannerSweep {
-    0%, 100% { top: 0%; opacity: 0; }
-    10%, 90% { opacity: 0.8; }
-    50% { top: 100%; opacity: 0.8; }
-}
 
 
 /* ==========================================
