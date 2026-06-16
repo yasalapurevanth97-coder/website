@@ -2164,6 +2164,8 @@ body.light-mode .footer-logo-svg {
    ========================================== */
 .hero-badges-row {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -2228,13 +2230,93 @@ body.light-mode .hero-badge-stat {
     color: var(--accent-primary);
 }
 
+.hero-socials-badge-row {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.hero-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    transition: var(--transition-smooth);
+    text-decoration: none;
+    animation: statFloatItem 5s infinite alternate ease-in-out -1s;
+}
+
+.hero-social-btn svg,
+.hero-social-btn .brand-logo-svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition-quick);
+}
+
+.hero-social-btn svg:not(.brand-logo-svg) {
+    color: var(--accent-primary);
+}
+
+.hero-social-btn.github svg {
+    color: var(--text-primary);
+}
+
+.hero-social-btn:hover {
+    transform: translateY(-5px) scale(1.08) !important;
+}
+
+.hero-social-btn:hover svg,
+.hero-social-btn:hover .brand-logo-svg {
+    transform: scale(1.1);
+}
+
+.hero-social-btn.linkedin:hover {
+    border-color: #0a66c2 !important;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.45) !important;
+    background: rgba(10, 102, 194, 0.08);
+}
+
+.hero-social-btn.gmail:hover {
+    border-color: #ea4335 !important;
+    box-shadow: 0 0 20px rgba(234, 67, 53, 0.45) !important;
+    background: rgba(234, 67, 53, 0.08);
+}
+
+.hero-social-btn.github:hover {
+    border-color: var(--text-primary) !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25) !important;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body.light-mode .hero-social-btn.github:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) !important;
+    background: rgba(0, 0, 0, 0.04);
+}
+
+body.light-mode .hero-social-btn {
+    background: rgba(255, 255, 255, 0.45);
+}
+
 @media(max-width: 480px) {
     .hero-badges-row {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 0.8rem;
         width: 100%;
     }
     .hero-badge-stat {
+        justify-content: center;
+    }
+    .hero-socials-badge-row {
         justify-content: center;
     }
 }
