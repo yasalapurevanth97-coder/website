@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const typedTextSpan = document.querySelector('.typed-text');
     const roles = [
-        "engineering student (8.90)CGPA",
+        "engineering student (9.03)CGPA",
         "web developer"
     ];
     let roleIndex = 0;
@@ -539,13 +539,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // INTERACTIVE PROFILE PHOTO CUSTOMIZER (DISABLED)
+    // PROFILE PHOTO CACHE CLEANUP
     // ==========================================
-    const profileDisplayImg = document.getElementById('profile-display-img');
-
-    // Load custom profile photo from localStorage if cached
-    const savedPhoto = localStorage.getItem('revanth-profile-photo');
-    if (savedPhoto && profileDisplayImg) {
-        profileDisplayImg.src = savedPhoto;
+    if (localStorage.getItem('revanth-profile-photo')) {
+        localStorage.removeItem('revanth-profile-photo');
     }
 });
