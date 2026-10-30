@@ -153,7 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedTextSpan = document.querySelector('.typed-text');
     const roles = [
         "engineering student (9.03)CGPA",
-        "web developer"
+        "web developer",
+        "Data Entry Operator"
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -205,21 +206,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const isExpanded = card.classList.toggle('expanded');
             
-            // Adjust button inner text and icon
             if (isExpanded) {
                 button.innerHTML = `<i data-lucide="eye-off"></i> Hide Architecture`;
             } else {
                 button.innerHTML = `<i data-lucide="network"></i> View Architecture`;
             }
             
-            // Re-render lucide inside button
             lucide.createIcons();
             
-            // Smoothly scroll card into view if expanded
             if (isExpanded) {
                 setTimeout(() => {
                     card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }, 300);
+            }
+        });
+    });
+
+    // Also enable clicking the project visual showcase to toggle schematic drawer
+    const projectVisuals = document.querySelectorAll('.project-visual');
+    projectVisuals.forEach(visual => {
+        visual.style.cursor = 'pointer';
+        visual.setAttribute('title', 'Click to view / hide architecture flow');
+        visual.addEventListener('click', (e) => {
+            const card = visual.closest('.project-card');
+            if (!card) return;
+            const isExpanded = card.classList.toggle('expanded');
+            lucide.createIcons();
+            if (isExpanded) {
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 200);
             }
         });
     });
